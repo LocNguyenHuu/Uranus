@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: uranus_dev
+  schema_search_path: public
+  pool: 50
+  host: localhost
+  username: locnguyen
+  password: locnhse61312
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: uranus_test
+  schema_search_path: public
+  pool: 50
+  host: localhost
+  username: locnguyen
+  password: locnhse61312
+

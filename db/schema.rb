@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170624131655) do
+ActiveRecord::Schema.define(version: 20170624132139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,30 @@ ActiveRecord::Schema.define(version: 20170624131655) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "badges_sashes", force: :cascade do |t|
+    t.integer  "badge_id"
+    t.integer  "sash_id"
+    t.boolean  "notified_user"
+    t.datetime "create_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "title",            limit: 50, default: ""
+    t.text     "comment"
+    t.string   "commentable_type"
+    t.integer  "commentable_id"
+    t.integer  "user_id"
+    t.string   "role",                        default: "comments"
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.index ["commentable_id"], name: "index_comments_on_commentable_id", using: :btree
+    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
+    t.index ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

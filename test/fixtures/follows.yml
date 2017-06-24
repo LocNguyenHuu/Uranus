@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  followable_type: MyString
+  followable_id: 1
+  follower_type: MyString
+  follower_id: 1
+  blocked: false
+  created_at: 2017-06-24 20:36:34
+  updated_at: 2017-06-24 20:36:34
+
+two:
+  followable_type: MyString
+  followable_id: 1
+  follower_type: MyString
+  follower_id: 1
+  blocked: false
+  created_at: 2017-06-24 20:36:34
+  updated_at: 2017-06-24 20:36:34

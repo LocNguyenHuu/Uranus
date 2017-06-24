@@ -1,0 +1,2 @@
+class BadgesSash < ApplicationRecord
+end

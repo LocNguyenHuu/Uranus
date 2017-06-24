@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  badge_id: 1
+  sash_id: 1
+  notified_user: false
+  create_at: 2017-06-24 20:20:41
+
+two:
+  badge_id: 1
+  sash_id: 1
+  notified_user: false
+  create_at: 2017-06-24 20:20:41

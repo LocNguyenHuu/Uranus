@@ -1,0 +1,2 @@
+class FriendlyIdSlug < ApplicationRecord
+end
